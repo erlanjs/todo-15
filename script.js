@@ -39,19 +39,19 @@ function getUsersRequest() {
 
         h3.textContent = user.name || "";
 
-        const button = document.createElement("button");
-        button.textContent = "Delete";
+        // const button = document.createElement("button");
+        // button.textContent = "Delete";
 
         item.append(h3);
-        item.append(button);
+        // item.append(button);
 
-        button.addEventListener("click", () => {
-          fetch(`${LIST_USERS_API}/${user.id}`, {
-            method: "DELETE",
-          })
-            .then((data) => data.json())
-            .then(() => getUsersRequest());
-        });
+        // button.addEventListener("click", () => {
+        //   fetch(`${LIST_USERS_API}/${user.id}`, {
+        //     method: "DELETE",
+        //   })
+        //     .then((data) => data.json())
+        //     .then(() => getUsersRequest());
+        // });
 
         listUsers.append(item);
       });
